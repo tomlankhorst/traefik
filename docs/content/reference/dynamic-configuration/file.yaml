@@ -219,7 +219,7 @@ http:
         featurePolicy: foobar
         isDevelopment: true
     Middleware11:
-      ipWhiteList:
+      ipAllowList:
         sourceRange:
         - foobar
         - foobar
@@ -398,7 +398,7 @@ tcp:
           - foobar
   middlewares:
     Middleware00:
-      ipWhiteList:
+      ipAllowList:
         sourceRange:
         - foobar
         - foobar

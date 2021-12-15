@@ -21,7 +21,7 @@ type MiddlewareTCP struct {
 // MiddlewareTCPSpec holds the MiddlewareTCP configuration.
 type MiddlewareTCPSpec struct {
 	InFlightConn *dynamic.TCPInFlightConn `json:"inFlightConn,omitempty"`
-	IPWhiteList  *dynamic.TCPIPWhiteList  `json:"ipWhiteList,omitempty"`
+	IPAllowList  *dynamic.TCPIPAllowList  `json:"ipAllowList,omitempty"`
 }
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object

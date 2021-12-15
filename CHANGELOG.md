@@ -41,7 +41,7 @@
 - **[plugins]** Update yaegi to v0.10.0 ([#8452](https://github.com/traefik/traefik/pull/8452) by [ldez](https://github.com/ldez))
 
 **Documentation:**
-- **[middleware,file]** Fix TCP middleware whitelist example ([#8421](https://github.com/traefik/traefik/pull/8421) by [tribal2](https://github.com/tribal2))
+- **[middleware,file]** Fix TCP middleware allowlist example ([#8421](https://github.com/traefik/traefik/pull/8421) by [tribal2](https://github.com/tribal2))
 - **[middleware]** Add default proxy headers list ([#8418](https://github.com/traefik/traefik/pull/8418) by [aaronraff](https://github.com/aaronraff))
 - Add Tom Moulard in maintainers team ([#8442](https://github.com/traefik/traefik/pull/8442) by [jbdoumenjou](https://github.com/jbdoumenjou))
 - Fix golang doc URLs ([#8434](https://github.com/traefik/traefik/pull/8434) by [jbdoumenjou](https://github.com/jbdoumenjou))
@@ -1367,7 +1367,7 @@ Skipped.
 - **[api,k8s/crd]** Add a documentation example for dashboard and api for kubernetes CRD ([#6022](https://github.com/traefik/traefik/pull/6022) by [dduportal](https://github.com/dduportal))
 - **[cli]** Fix examples for the use of websecure via CLI ([#6116](https://github.com/traefik/traefik/pull/6116) by [tiagoboeing](https://github.com/tiagoboeing))
 - **[k8s,k8s/crd]** Improve documentation about Kubernetes IngressRoute ([#6058](https://github.com/traefik/traefik/pull/6058) by [jbdoumenjou](https://github.com/jbdoumenjou))
-- **[middleware]** Improve sourceRange explanation for ipWhiteList ([#6070](https://github.com/traefik/traefik/pull/6070) by [der-domi](https://github.com/der-domi))
+- **[middleware]** Improve sourceRange explanation for ipAllowList ([#6070](https://github.com/traefik/traefik/pull/6070) by [der-domi](https://github.com/der-domi))
 
 ## [v2.1.1](https://github.com/traefik/traefik/tree/v2.1.1) (2019-12-12)
 [All Commits](https://github.com/traefik/traefik/compare/v2.1.0...v2.1.1)
@@ -1727,7 +1727,7 @@ Same changelog as v2.0.3.
 - **[middleware,provider]** Change the provider separator from . to @ ([#4982](https://github.com/traefik/traefik/pull/4982) by [ldez](https://github.com/ldez))
 - **[middleware,provider]** Add Feature-Policy header support ([#5156](https://github.com/traefik/traefik/pull/5156) by [dtomcej](https://github.com/dtomcej))
 - **[middleware,tracing]** Re enable ratelimit integration tests ([#5288](https://github.com/traefik/traefik/pull/5288) by [mmatur](https://github.com/mmatur))
-- **[middleware,provider]** IPStrategy for selecting IP in whitelist ([#3778](https://github.com/traefik/traefik/pull/3778) by [juliens](https://github.com/juliens))
+- **[middleware,provider]** IPStrategy for selecting IP in allowlist ([#3778](https://github.com/traefik/traefik/pull/3778) by [juliens](https://github.com/juliens))
 - **[middleware,provider]** Enables the use of elements declared in other providers ([#4372](https://github.com/traefik/traefik/pull/4372) by [geraldcroes](https://github.com/geraldcroes))
 - **[middleware]** Migrates the pass client tls cert middleware ([#4373](https://github.com/traefik/traefik/pull/4373) by [jbdoumenjou](https://github.com/jbdoumenjou))
 - **[middleware]** Migrates Compress from bool to struct ([#3714](https://github.com/traefik/traefik/pull/3714) by [jbdoumenjou](https://github.com/jbdoumenjou))
@@ -2424,7 +2424,7 @@ Same changelog as v2.0.3.
 - **[k8s/ingress]** Custom resource definition ([#4591](https://github.com/traefik/traefik/pull/4591) by [ldez](https://github.com/ldez))
 - **[marathon]** Adds Marathon support. ([#4415](https://github.com/traefik/traefik/pull/4415) by [ldez](https://github.com/ldez))
 - **[metrics]** Add HTTP authentication to influxdb metric backend ([#3600](https://github.com/traefik/traefik/pull/3600) by [halfa](https://github.com/halfa))
-- **[middleware,provider]** IPStrategy for selecting IP in whitelist ([#3778](https://github.com/traefik/traefik/pull/3778) by [juliens](https://github.com/juliens))
+- **[middleware,provider]** IPStrategy for selecting IP in allowlist ([#3778](https://github.com/traefik/traefik/pull/3778) by [juliens](https://github.com/juliens))
 - **[middleware,provider]** Enables the use of elements declared in other providers ([#4372](https://github.com/traefik/traefik/pull/4372) by [geraldcroes](https://github.com/geraldcroes))
 - **[middleware]** Migrates the pass client tls cert middleware ([#4373](https://github.com/traefik/traefik/pull/4373) by [jbdoumenjou](https://github.com/jbdoumenjou))
 - **[middleware]** Migrates Compress from bool to struct ([#3714](https://github.com/traefik/traefik/pull/3714) by [jbdoumenjou](https://github.com/jbdoumenjou))
@@ -2694,7 +2694,7 @@ Same changelog as v2.0.3.
 - **[k8s]** Add Template-ability check to Kubernetes API Fields ([#3964](https://github.com/traefik/traefik/pull/3964) by [dtomcej](https://github.com/dtomcej))
 - **[logs]** Colored logs on windows. ([#3966](https://github.com/traefik/traefik/pull/3966) by [ldez](https://github.com/ldez))
 - **[middleware]** Whitelist log for deprecated configuration. ([#3963](https://github.com/traefik/traefik/pull/3963) by [ldez](https://github.com/ldez))
-- **[middleware]** Trimming whitespace in XFF for IP whitelisting ([#3971](https://github.com/traefik/traefik/pull/3971) by [olmoser](https://github.com/olmoser))
+- **[middleware]** Trimming whitespace in XFF for IP allowlisting ([#3971](https://github.com/traefik/traefik/pull/3971) by [olmoser](https://github.com/olmoser))
 - **[rules]** Rule parsing error. ([#3976](https://github.com/traefik/traefik/pull/3976) by [ldez](https://github.com/ldez))
 - Global configuration log at start ([#3954](https://github.com/traefik/traefik/pull/3954) by [ldez](https://github.com/ldez))
 
@@ -3239,7 +3239,7 @@ Same changelog as v2.0.3.
 - **[middleware,consulcatalog,docker,ecs,k8s,kv,marathon,mesos,rancher]** Ability to use &#34;X-Forwarded-For&#34; as a source of IP for white list. ([#3070](https://github.com/traefik/traefik/pull/3070) by [ldez](https://github.com/ldez))
 - **[middleware,docker]** Use pointer of error pages ([#2607](https://github.com/traefik/traefik/pull/2607) by [ldez](https://github.com/ldez))
 - **[middleware,provider]** Redirection: permanent move option. ([#2774](https://github.com/traefik/traefik/pull/2774) by [ldez](https://github.com/ldez))
-- **[middleware]** Add tests on IPWhiteLister. ([#3106](https://github.com/traefik/traefik/pull/3106) by [ldez](https://github.com/ldez))
+- **[middleware]** Add tests on IPAllowLister. ([#3106](https://github.com/traefik/traefik/pull/3106) by [ldez](https://github.com/ldez))
 - **[middleware]** Change port of traefik for error pages integration test ([#2907](https://github.com/traefik/traefik/pull/2907) by [mmatur](https://github.com/mmatur))
 - **[middleware]** Remove unnecessary returns in tracing setup ([#2880](https://github.com/traefik/traefik/pull/2880) by [ferhatelmas](https://github.com/ferhatelmas))
 - **[middleware]** Request buffering middleware ([#2217](https://github.com/traefik/traefik/pull/2217) by [harnash](https://github.com/harnash))
@@ -3294,7 +3294,7 @@ Same changelog as v2.0.3.
 - **[middleware]** Use responseModifier to override secure headers ([#2946](https://github.com/traefik/traefik/pull/2946) by [mmatur](https://github.com/mmatur))
 - **[middleware]** Correct conditional setting of buffering retry expression. ([#2865](https://github.com/traefik/traefik/pull/2865) by [ldez](https://github.com/ldez))
 - **[middleware]** Fix high memory usage in retry middleware ([#2740](https://github.com/traefik/traefik/pull/2740) by [marco-jantke](https://github.com/marco-jantke))
-- **[middleware]** Fix whitelist and XFF. ([#3211](https://github.com/traefik/traefik/pull/3211) by [ldez](https://github.com/ldez))
+- **[middleware]** Fix allowlist and XFF. ([#3211](https://github.com/traefik/traefik/pull/3211) by [ldez](https://github.com/ldez))
 - **[middleware]** Fix panic in atomic on ARM and x86-32 platforms ([#3195](https://github.com/traefik/traefik/pull/3195) by [mmatur](https://github.com/mmatur))
 - **[middleware]** Redirect to HTTPS first before basic auth if header redirect (secure) is set ([#3187](https://github.com/traefik/traefik/pull/3187) by [SantoDE](https://github.com/SantoDE))
 - **[middleware]** Fix error pages redirect and headers. ([#3217](https://github.com/traefik/traefik/pull/3217) by [ldez](https://github.com/ldez))
@@ -3406,7 +3406,7 @@ Same changelog as v2.0.3.
 
 **Enhancements:**
 - **[consulcatalog,ecs,mesos]** Factorize labels managements. ([#3099](https://github.com/traefik/traefik/pull/3099) by [ldez](https://github.com/ldez))
-- **[middleware]** Add tests on IPWhiteLister. ([#3106](https://github.com/traefik/traefik/pull/3106) by [ldez](https://github.com/ldez))
+- **[middleware]** Add tests on IPAllowLister. ([#3106](https://github.com/traefik/traefik/pull/3106) by [ldez](https://github.com/ldez))
 
 **Bug fixes:**
 - **[api,cluster]** Moved /api/cluster/leadership handler under public routes (requires no authentication) ([#3101](https://github.com/traefik/traefik/pull/3101) by [aantono](https://github.com/aantono))
@@ -4111,7 +4111,7 @@ Same changelog as v2.0.3.
 - **[metrics]** Extract metrics to own package and refactor implementations ([#1968](https://github.com/traefik/traefik/pull/1968) by [marco-jantke](https://github.com/marco-jantke))
 - **[metrics]** Add metrics for backend_retries_total ([#1504](https://github.com/traefik/traefik/pull/1504) by [marco-jantke](https://github.com/marco-jantke))
 - **[metrics]** Add status code to request duration metric ([#1755](https://github.com/traefik/traefik/pull/1755) by [marco-jantke](https://github.com/marco-jantke))
-- **[middleware]** Add trusted whitelist proxy protocol ([#2234](https://github.com/traefik/traefik/pull/2234) by [emilevauge](https://github.com/emilevauge)))
+- **[middleware]** Add trusted allowlist proxy protocol ([#2234](https://github.com/traefik/traefik/pull/2234) by [emilevauge](https://github.com/emilevauge)))
 - **[metrics]** Datadog and StatsD Metrics Support ([#1701](https://github.com/traefik/traefik/pull/1701) by [aantono](https://github.com/aantono))
 - **[middleware]** Create Header Middleware ([#1236](https://github.com/traefik/traefik/pull/1236) by [dtomcej](https://github.com/dtomcej))
 - **[middleware]** Add configurable timeouts and curate default timeout settings ([#1873](https://github.com/traefik/traefik/pull/1873) by [marco-jantke](https://github.com/marco-jantke))
@@ -4137,7 +4137,7 @@ Same changelog as v2.0.3.
 - **[webui]** Minor Health UI fixes ([#1651](https://github.com/traefik/traefik/pull/1651) by [mihaitodor](https://github.com/mihaitodor))
 - Fail fast in IT and fix some flaky tests ([#2126](https://github.com/traefik/traefik/pull/2126) by [ldez](https://github.com/ldez))
 - extract lb configuration steps into method ([#1841](https://github.com/traefik/traefik/pull/1841) by [marco-jantke](https://github.com/marco-jantke))
-- Add whitelist configuration option for entrypoints ([#1702](https://github.com/traefik/traefik/pull/1702) by [christopherobin](https://github.com/christopherobin))
+- Add allowlist configuration option for entrypoints ([#1702](https://github.com/traefik/traefik/pull/1702) by [christopherobin](https://github.com/christopherobin))
 - Enhance integration tests ([#1842](https://github.com/traefik/traefik/pull/1842) by [ldez](https://github.com/ldez))
 - Add helloworld tests with gRPC ([#1845](https://github.com/traefik/traefik/pull/1845) by [Juliens](https://github.com/Juliens))
 - Add the sprig functions in the template engine ([#1891](https://github.com/traefik/traefik/pull/1891) by [thomasbach76](https://github.com/thomasbach76))
@@ -4287,7 +4287,7 @@ Same changelog as v2.0.3.
 [All Commits](https://github.com/traefik/traefik/compare/v1.4.0-rc4...v1.4.0-rc5)
 
 **Enhancements:**
-- **[middleware]** Add trusted whitelist proxy protocol ([#2234](https://github.com/traefik/traefik/pull/2234) by [emilevauge](https://github.com/emilevauge))
+- **[middleware]** Add trusted allowlist proxy protocol ([#2234](https://github.com/traefik/traefik/pull/2234) by [emilevauge](https://github.com/emilevauge))
 
 **Bug fixes:**
 - **[consul,docker,ecs,k8s,marathon,rancher,sticky-session]** Stickiness cookie name ([#2232](https://github.com/traefik/traefik/pull/2232) by [ldez](https://github.com/ldez))
@@ -4445,7 +4445,7 @@ Same changelog as v2.0.3.
 - **[webui]** Proxy in dev mode ([#1544](https://github.com/traefik/traefik/pull/1544) by [maxwo](https://github.com/maxwo))
 - extract lb configuration steps into method ([#1841](https://github.com/traefik/traefik/pull/1841) by [marco-jantke](https://github.com/marco-jantke))
 - Allow file provider to load service config from files in a directory. ([#1672](https://github.com/traefik/traefik/pull/1672) by [rjshep](https://github.com/rjshep))
-- Add whitelist configuration option for entrypoints ([#1702](https://github.com/traefik/traefik/pull/1702) by [christopherobin](https://github.com/christopherobin))
+- Add allowlist configuration option for entrypoints ([#1702](https://github.com/traefik/traefik/pull/1702) by [christopherobin](https://github.com/christopherobin))
 - Enhance integration tests ([#1842](https://github.com/traefik/traefik/pull/1842) by [ldez](https://github.com/ldez))
 - Add helloworld tests with gRPC ([#1845](https://github.com/traefik/traefik/pull/1845) by [Juliens](https://github.com/Juliens))
 - Add the sprig functions in the template engine ([#1891](https://github.com/traefik/traefik/pull/1891) by [thomasbach76](https://github.com/thomasbach76))

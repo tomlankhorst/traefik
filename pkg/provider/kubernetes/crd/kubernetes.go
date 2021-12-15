@@ -249,7 +249,7 @@ func (p *Provider) loadConfigurationFromCRD(ctx context.Context, client Client) 
 			ReplacePath:       middleware.Spec.ReplacePath,
 			ReplacePathRegex:  middleware.Spec.ReplacePathRegex,
 			Chain:             createChainMiddleware(ctxMid, middleware.Namespace, middleware.Spec.Chain),
-			IPWhiteList:       middleware.Spec.IPWhiteList,
+			IPAllowList:       middleware.Spec.IPAllowList,
 			Headers:           middleware.Spec.Headers,
 			Errors:            errorPage,
 			RateLimit:         rateLimit,
@@ -274,7 +274,7 @@ func (p *Provider) loadConfigurationFromCRD(ctx context.Context, client Client) 
 
 		conf.TCP.Middlewares[id] = &dynamic.TCPMiddleware{
 			InFlightConn: middlewareTCP.Spec.InFlightConn,
-			IPWhiteList:  middlewareTCP.Spec.IPWhiteList,
+			IPAllowList:  middlewareTCP.Spec.IPAllowList,
 		}
 	}
 

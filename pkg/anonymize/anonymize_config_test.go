@@ -189,7 +189,7 @@ func TestDo_dynamicConfiguration(t *testing.T) {
 				Chain: &dynamic.Chain{
 					Middlewares: []string{"foo"},
 				},
-				IPWhiteList: &dynamic.IPWhiteList{
+				IPAllowList: &dynamic.IPAllowList{
 					SourceRange: []string{"foo"},
 					IPStrategy: &dynamic.IPStrategy{
 						Depth:       42,

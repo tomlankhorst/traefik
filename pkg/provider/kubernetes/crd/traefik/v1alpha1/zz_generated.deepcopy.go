@@ -657,9 +657,9 @@ func (in *MiddlewareSpec) DeepCopyInto(out *MiddlewareSpec) {
 		*out = new(Chain)
 		(*in).DeepCopyInto(*out)
 	}
-	if in.IPWhiteList != nil {
-		in, out := &in.IPWhiteList, &out.IPWhiteList
-		*out = new(dynamic.IPWhiteList)
+	if in.IPAllowList != nil {
+		in, out := &in.IPAllowList, &out.IPAllowList
+		*out = new(dynamic.IPAllowList)
 		(*in).DeepCopyInto(*out)
 	}
 	if in.Headers != nil {
@@ -825,9 +825,9 @@ func (in *MiddlewareTCPSpec) DeepCopyInto(out *MiddlewareTCPSpec) {
 		*out = new(dynamic.TCPInFlightConn)
 		**out = **in
 	}
-	if in.IPWhiteList != nil {
-		in, out := &in.IPWhiteList, &out.IPWhiteList
-		*out = new(dynamic.TCPIPWhiteList)
+	if in.IPAllowList != nil {
+		in, out := &in.IPAllowList, &out.IPAllowList
+		*out = new(dynamic.TCPIPAllowList)
 		(*in).DeepCopyInto(*out)
 	}
 	return

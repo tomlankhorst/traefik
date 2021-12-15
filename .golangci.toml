@@ -35,7 +35,7 @@
     ]
 
   [linters-settings.depguard]
-    list-type = "blacklist"
+    list-type = "denylist"
     include-go-root = false
     packages = ["github.com/pkg/errors"]
 

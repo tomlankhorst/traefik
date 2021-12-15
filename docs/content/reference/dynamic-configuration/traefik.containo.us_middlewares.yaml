@@ -374,8 +374,8 @@ spec:
                         type: boolean
                     type: object
                 type: object
-              ipWhiteList:
-                description: IPWhiteList holds the ip white list configuration.
+              ipAllowList:
+                description: IPAllowList holds the ip white list configuration.
                 properties:
                   ipStrategy:
                     description: IPStrategy holds the ip strategy configuration.

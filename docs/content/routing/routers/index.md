@@ -828,7 +828,7 @@ The middlewares will take effect only if the rule matches, and before connecting
       [tcp.routers.my-router]
         rule = "HostSNI(`*`)"
         # declared elsewhere
-        middlewares = ["ipwhitelist"]
+        middlewares = ["ipallowlist"]
         service = "service-foo"
     ```
 
@@ -840,7 +840,7 @@ The middlewares will take effect only if the rule matches, and before connecting
           rule: "HostSNI(`*`)"
           # declared elsewhere
           middlewares:
-          - ipwhitelist
+          - ipallowlist
           service: service-foo
     ```
 

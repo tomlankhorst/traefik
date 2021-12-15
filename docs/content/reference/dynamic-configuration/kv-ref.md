@@ -80,11 +80,11 @@
 | `traefik/http/middlewares/Middleware10/headers/stsIncludeSubdomains` | `true` |
 | `traefik/http/middlewares/Middleware10/headers/stsPreload` | `true` |
 | `traefik/http/middlewares/Middleware10/headers/stsSeconds` | `42` |
-| `traefik/http/middlewares/Middleware11/ipWhiteList/ipStrategy/depth` | `42` |
-| `traefik/http/middlewares/Middleware11/ipWhiteList/ipStrategy/excludedIPs/0` | `foobar` |
-| `traefik/http/middlewares/Middleware11/ipWhiteList/ipStrategy/excludedIPs/1` | `foobar` |
-| `traefik/http/middlewares/Middleware11/ipWhiteList/sourceRange/0` | `foobar` |
-| `traefik/http/middlewares/Middleware11/ipWhiteList/sourceRange/1` | `foobar` |
+| `traefik/http/middlewares/Middleware11/ipAllowList/ipStrategy/depth` | `42` |
+| `traefik/http/middlewares/Middleware11/ipAllowList/ipStrategy/excludedIPs/0` | `foobar` |
+| `traefik/http/middlewares/Middleware11/ipAllowList/ipStrategy/excludedIPs/1` | `foobar` |
+| `traefik/http/middlewares/Middleware11/ipAllowList/sourceRange/0` | `foobar` |
+| `traefik/http/middlewares/Middleware11/ipAllowList/sourceRange/1` | `foobar` |
 | `traefik/http/middlewares/Middleware12/inFlightReq/amount` | `42` |
 | `traefik/http/middlewares/Middleware12/inFlightReq/sourceCriterion/ipStrategy/depth` | `42` |
 | `traefik/http/middlewares/Middleware12/inFlightReq/sourceCriterion/ipStrategy/excludedIPs/0` | `foobar` |
@@ -228,8 +228,8 @@
 | `traefik/http/services/Service03/weighted/sticky/cookie/name` | `foobar` |
 | `traefik/http/services/Service03/weighted/sticky/cookie/sameSite` | `foobar` |
 | `traefik/http/services/Service03/weighted/sticky/cookie/secure` | `true` |
-| `traefik/tcp/middlewares/Middleware00/ipWhiteList/sourceRange/0` | `foobar` |
-| `traefik/tcp/middlewares/Middleware00/ipWhiteList/sourceRange/1` | `foobar` |
+| `traefik/tcp/middlewares/Middleware00/ipAllowList/sourceRange/0` | `foobar` |
+| `traefik/tcp/middlewares/Middleware00/ipAllowList/sourceRange/1` | `foobar` |
 | `traefik/tcp/routers/TCPRouter0/entryPoints/0` | `foobar` |
 | `traefik/tcp/routers/TCPRouter0/entryPoints/1` | `foobar` |
 | `traefik/tcp/routers/TCPRouter0/middlewares/0` | `foobar` |
